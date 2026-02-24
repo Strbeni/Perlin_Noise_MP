@@ -12,18 +12,14 @@ A C++ visualization of a flow field using Perlin Noise and SDL2.
 - **SDL2**: Required for graphics rendering.
 - **C++ Compiler**: (e.g., g++, clang, or MSVC).
 
-## Compilation
-To compile on Windows (assuming SDL2 is in your include/lib path):
-```bash
-g++ Perlin_Noise.cpp -o Perlin_Noise -lSDL2 -lSDL2main
-```
-
-If SDL2 is in a specific folder (e.g., `C:\SDL2`), use:
-```bash
-g++ Perlin_Noise.cpp -o Perlin_Noise -I"C:\path\to\SDL2\include" -L"path\to\SDL2\lib" -lSDL2 -lSDL2main
+## Compilation (MSYS2)
+Run this command in your PowerShell to compile:
+```powershell
+C:\msys64\ucrt64\bin\g++.exe Perlin_Noise.cpp -o Perlin_Noise.exe -I"C:\msys64\ucrt64\include" -L"C:\msys64\ucrt64\lib" -lmingw32 -lSDL2main -lSDL2
 ```
 
 ## Running
-```bash
-./Perlin_Noise
+I have already copied `SDL2.dll` to this folder for you. Just run:
+```powershell
+./Perlin_Noise.exe
 ```
